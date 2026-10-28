@@ -1,0 +1,7 @@
+node_modules/
+*.tgz
+*.log
+*.bak
+.login-session.json
+.login-token.json
+npm-debug*

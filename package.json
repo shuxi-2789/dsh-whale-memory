@@ -1,0 +1,72 @@
+{
+  "name": "dsh-whale-memory",
+  "version": "0.1.2",
+  "description": "DSH 插件：给长期陪伴型 AI 装一副能连续活着的大脑 —— 灵魂快照 / 四层召回 / 体检 / 索引 / 打标，全部包住零依赖记忆库（小鲸鱼记忆全系统 L2）。",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "whale memory",
+    "agent-memory",
+    "long-term-memory",
+    "persona",
+    "retrieval",
+    "simhash",
+    "mcp"
+  ],
+  "license": "MIT",
+  "author": "术西啊",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shuxi-2789/dsh-whale-memory.git"
+  },
+  "homepage": "https://github.com/shuxi-2789/dsh-whale-memory#readme",
+  "bugs": {
+    "url": "https://github.com/shuxi-2789/dsh-whale-memory/issues"
+  },
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "lib",
+    "vendor",
+    "README.md",
+    "AGENTS.md",
+    "selfcheck.mjs",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "dsh": ">=0.1.7-rc.1",
+    "node": ">=20"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": "*",
+    "@deepseek-ai/schemastery": "*"
+  },
+  "dependencies": {
+    "@deepseek-ai/schemastery": "^3.18.1"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh-tools": {
+      "optional": true
+    },
+    "@deepseek-ai/schemastery": {
+      "optional": true
+    }
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

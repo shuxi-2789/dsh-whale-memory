@@ -1,0 +1,26 @@
+{
+  "socialV2": {
+    "soulInherit": {
+      "enabled": true,
+      "persona": "【代号】",
+      "archivePrefix": "归档",
+      "emoji": "",
+      "brainDir": "../brain-template",
+      "diaryDir": "../diary-template",
+      "diaryFileName": "私人日记.txt",
+      "maxChars": 20000,
+      "moduleMaxChars": 6000,
+      "rootMaxChars": 8000,
+      "keepWeeks": 2,
+      "recentChat": { "enabled": true, "maxChars": 1800, "maxItems": 40, "windowHours": 26 },
+      "perTurn": {
+        "enabled": true,
+        "maxItems": 5,
+        "maxChars": 1200,
+        "semantic": { "enabled": true, "maxItems": 3, "maxChars": 600, "minScore": 9 },
+        "simhash": { "enabled": true, "maxItems": 2, "maxChars": 400, "maxDistance": 24, "minGap": 4 }
+      }
+    }
+  },
+  "_diaryBlockExample": "如果你的宿主给她开了「只能追加、路径钉死」的小本本写入工具，照 diary 块的形状再配一份：见 code/config.keys.md 末尾。本套件的脚本不使用它。"
+}
