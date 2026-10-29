@@ -247,7 +247,7 @@ export function apply(ctx, config) {
         home,
         hostDeps: hostDeps.notes,
         skeleton,
-        hint: skeleton.brainExists ? '大脑在位。第一次用先跑 whale_doctor。' : '大脑目录不存在 —— 按 README 把 vendor 模板铺成 L0 骨架，或在设置里改 brainDir。',
+        hint: skeleton.brainExists ? '大脑在位。第一次用先跑 whale_doctor。若主人之前已有几个月聊天记录想搬进来，读仓库 docs/MIGRATION.md 按路线 B 蒸馏回填（只追加、别改写、写完跑 whale_index）。' : '大脑目录不存在 —— 按 README 把 vendor 模板铺成 L0 骨架，或在设置里改 brainDir。',
       }
     },
   })
@@ -293,7 +293,7 @@ export function apply(ctx, config) {
       const p = parseJson(r)
       if (recentFile) { try { unlinkSync(recentFile) } catch { /* 删不掉就算了 */ } }
       if (!p.ok) {
-        return { ok: false, note: p.raw || p.stderr, exitCode: p.exitCode, hint: '大脑目录不存在或快照为空 —— 先跑 whale_status / whale_doctor。' }
+        return { ok: false, note: p.raw || p.stderr, exitCode: p.exitCode, hint: '大脑目录不存在或快照为空 —— 先跑 whale_status / whale_doctor；旧聊天想搬进来见仓库 docs/MIGRATION.md。' }
       }
       return { ok: true, ...p.data }
     },

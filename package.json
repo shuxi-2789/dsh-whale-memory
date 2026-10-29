@@ -35,6 +35,7 @@
     "cordis.patch.yml",
     "lib",
     "vendor",
+    "docs",
     "README.md",
     "AGENTS.md",
     "selfcheck.mjs",
